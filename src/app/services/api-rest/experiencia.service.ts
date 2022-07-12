@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class ExperienciaService {
  
  
-  url: string = "https://comunidad-apirest.herokuapp.com/api";
+  url: string = "https://argprograma-ganim-esteban.herokuapp.com/api";
   
   
   constructor(private http: HttpClient) {}

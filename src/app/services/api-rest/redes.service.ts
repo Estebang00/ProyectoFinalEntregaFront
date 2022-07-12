@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class RedesService {
 
-  url: string = "https://comunidad-apirest.herokuapp.com/api";
+  url: string = "https://argprograma-ganim-esteban.herokuapp.com/api";
   
  
   

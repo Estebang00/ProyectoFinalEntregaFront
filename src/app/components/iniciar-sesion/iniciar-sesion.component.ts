@@ -32,12 +32,12 @@ export class IniciarSesionComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    //probablemente acá quiera cargar algo...
+    
   }
 
   loginFalso() {
     //pedir al post...    
-    this.userService.login("olivia", "1234").subscribe(
+    this.userService.login("esteban", "1234").subscribe(
       data => {
         this.persona = data;
         //console.log(this.persona);
