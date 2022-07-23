@@ -21,12 +21,10 @@ export class SkillService {
     console.log("pasa por getAll?")
 	  return this.http.get(this.url+'/skills');
 	}
-  //terminar en algun momento
   update(id: number, skill: any): Observable<any>{
     return this.http.put(this.url + `/skills/${id}`, skill);
   }
 
-  //terminar en algun momento
   delete(id: number): Observable<any>{
     return this.http.delete(this.url + `/skills/${id}`);
   }

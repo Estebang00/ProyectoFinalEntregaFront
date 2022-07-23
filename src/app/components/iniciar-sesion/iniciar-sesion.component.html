@@ -16,10 +16,10 @@
             <input type="password" formControlName="password"
             [ngClass]="{'is-invalid': password?.errors && password?.touched, 'is-valid': password?.valid && password?.touched}"
             class="form-control" id="exampleInputPassword1">            
-            <div *ngIf="password?.errors && password?.touched">
+            <div *ngIf="password?.errors&& password?.touched ">
                 <p *ngIf="password?.hasError('required')" class="text-danger">
-                    La contraseña es requerida
-                </p>              
+                    La contraseña es requerida </p> 
+                            
             </div>
         </div>
 

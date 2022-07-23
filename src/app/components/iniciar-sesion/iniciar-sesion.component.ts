@@ -13,7 +13,7 @@ import { AutenticationService } from 'src/app/services/api-rest/autentication.se
 })
 export class IniciarSesionComponent implements OnInit {
   persona!: Persona;
-  formulario: FormGroup; // crear una variable para el formulario... TODO ESTA EN LA MASTERCLASS 8.1
+  formulario: FormGroup; // crear una variable para el formulario
 
   constructor(private router: Router, private userService: UserService, private formBuilder: FormBuilder, private autenticationServ: AutenticationService) { //inyectar formBuilder para los formularios reactivos
     // crea el formulario con los campos necesarios
@@ -32,7 +32,6 @@ export class IniciarSesionComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    
   }
 
   loginFalso() {
@@ -40,7 +39,6 @@ export class IniciarSesionComponent implements OnInit {
     this.userService.login("esteban", "1234").subscribe(
       data => {
         this.persona = data;
-        //console.log(this.persona);
         localStorage.setItem("persona", JSON.stringify(this.persona));
         this.volverAlHome();
       }
@@ -55,6 +53,7 @@ export class IniciarSesionComponent implements OnInit {
         console.log(this.persona);
         localStorage.setItem("persona", JSON.stringify(this.persona));
         this.volverAlHome();
+        
       }
     );
   }
@@ -67,9 +66,7 @@ export class IniciarSesionComponent implements OnInit {
     console.log(this.formulario.value);
     this.autenticationServ.IniciarSesion(this.formulario.value.username, this.formulario.value.password).subscribe(
       data => {
-       // this.persona = data;
         console.log(data);
-        //localStorage.setItem("persona", JSON.stringify(this.persona));
         this.volverAlHome();
       }
     );;

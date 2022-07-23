@@ -25,7 +25,6 @@ export class EducacionService {
     return this.http.put(this.url + `/educacion/${id}`, educacion);
   }
 
-  //terminar en algun momento
   delete(id: number): Observable<any>{
     return this.http.delete(this.url + `/educacion/${id}`);
    

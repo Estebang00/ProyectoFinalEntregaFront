@@ -14,10 +14,4 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.loginService.LogState().subscribe((login) => (this.login = login));     
   }
-  /*
-  isLoggedIn(): boolean {
-
-    return this.loginService.isLoggedIn();  
-  }
-*/
 }

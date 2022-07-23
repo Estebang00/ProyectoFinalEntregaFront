@@ -10,6 +10,6 @@ export class DeletebuttonComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-  }
+}
 
 }

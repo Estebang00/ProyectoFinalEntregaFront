@@ -34,18 +34,8 @@ export class AboutComponent implements OnInit {
       this.loginService.LogState().subscribe((login) => (this.login = login)); 
       
     }
-     
-
-  /*de aca tomada los datos    
-  About: any[] = [
-  {   acercade: "Acerca de",
-      texto: "Programador fullstack junior freelance."
-
-  } 
-]
-*/
+    
 abrirModal(id:any){
-  //utiliza el metodo open de NgbModal para abrir el modal. El parametro es el componente que se va a mostrar en el modal. "centred" se usa para centrar el modal.
   console.log(id)
   const modalRef = this.modalService.open(AboutModalComponent, { centered: true }   );   //{ centered: true }     
   modalRef.componentInstance.id = id;     // pasa el id del elemento que se quiere editar al componente del modal
@@ -57,10 +47,4 @@ abrirModal(id:any){
   })
   
 }
-/*
-isLoggedIn(): boolean {
-
-  return this.loginService.isLoggedIn();  
-}
-*/
 }

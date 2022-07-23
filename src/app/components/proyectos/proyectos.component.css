@@ -1,4 +1,8 @@
-
+.row{
+    text-align: center;
+    background-color:rgb(73, 73, 255);
+    display: flex;
+}
 .card {
     width: 90%;
     text-align: center;

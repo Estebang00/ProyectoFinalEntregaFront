@@ -46,7 +46,6 @@ export class AutenticationService {
     console.log("llega aca?")
       return this.http.post<any>(this.url, this.user)
           .pipe(map(user => {
-              // store user details and jwt token in local storage to keep user logged in between page refreshes
               sessionStorage.setItem('currentUser', JSON.stringify(user));
               this.currentUserSubject.next(user);
               console.log("funciona esto?", this.currentUserSubject.value.token)

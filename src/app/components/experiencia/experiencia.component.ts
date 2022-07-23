@@ -76,7 +76,6 @@ export class ExperienciaComponent implements OnInit {
   ];
 
   abrirModal(id:any){
-    //utiliza el metodo open de NgbModal para abrir el modal. El parametro es el componente que se va a mostrar en el modal. "centred" se usa para centrar el modal.
     const modalRef = this.modalService.open(ExperienciaModalComponent, { centered: true }   );   //{ centered: true }     
     modalRef.componentInstance.id = id;  
     
@@ -85,11 +84,9 @@ export class ExperienciaComponent implements OnInit {
     }, (reason) => {
       alert("no funciono")
     })
-       // pasa el id del elemento que se quiere editar al componente del modal
   }
 
   abrirModalAgregar(){
-    //utiliza el metodo open de NgbModal para abrir el modal. El parametro es el componente que se va a mostrar en el modal. "centred" se usa para centrar el modal.
     const modalRef = this.modalService.open(ExperienciaModalComponent, { centered: true }   );   //{ centered: true }  
    modalRef.componentInstance.expNueva = this.expNueva;     // pasa un buleano para avisar al modal que es un objeto a crear
 
@@ -108,11 +105,4 @@ export class ExperienciaComponent implements OnInit {
       data => { this.ngOnInit() }
     );
   }
-
-  /*
-  isLoggedIn(): boolean {
-
-    return this.loginService.isLoggedIn();  
-  }
-  */
 }

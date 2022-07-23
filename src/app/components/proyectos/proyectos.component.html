@@ -3,7 +3,7 @@
   <app-addbutton *ngIf="login" (click)="abrirModalAgregar()"></app-addbutton>
   <br>
   <br>
-  <div class="card mb-3" style="max-width: 540px;" *ngFor="let Pro of proyecto">
+  <div class="card mb-3"  *ngFor="let Pro of proyecto">
     <div class="row g-0">
       <div class="col-md-4">
         <img [src]="Pro.url" class="img-fluid rounded-start" alt="...">

@@ -1,9 +1,11 @@
-<div id="about" class="card all-card">   
+<div id="about" class="card all-card" style="max-width: 800px;">   
       <div class="d-flex">
+            
             <h1>ACERCA DE MI</h1>
             <div>
                   <app-editbutton *ngIf="login" (click)="abrirModal(persona.idpersona)" class="me-2"></app-editbutton> 
             </div>
       </div>
       <p class="card-text">{{persona.acerca}}</p>
+
 </div>

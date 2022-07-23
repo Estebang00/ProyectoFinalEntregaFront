@@ -20,12 +20,10 @@ export class ProyectosService {
     console.log("pasa por getAll?")
 	  return this.http.get(this.url+'/proyectos');
 	}
-  //terminar en algun momento
   update(id: number, proyecto: any): Observable<any>{
     return this.http.put(this.url + `/proyectos/${id}`, proyecto);
   }
 
-  //terminar en algun momento
   delete(id: number): Observable<any>{
     return this.http.delete(this.url + `/proyectos/${id}`);
   }
